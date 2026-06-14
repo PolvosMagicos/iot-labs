@@ -1,0 +1,33 @@
+# Secrets / local environment
+.env
+.env.*
+!.env.example
+
+# Rust build outputs
+target/
+**/target/
+
+# ESP-IDF / generated config
+sdkconfig
+sdkconfig.old
+build/
+
+# Nix
+result
+result-*
+.direnv/
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# Mosquitto runtime data
+mosquitto/data/
+mosquitto/log/
+mosquitto/logs/
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
