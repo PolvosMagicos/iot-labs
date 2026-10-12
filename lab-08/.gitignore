@@ -1,0 +1,6 @@
+.env
+keys/
+target/
+**/target/
+**/.embuild/
+**/sdkconfig

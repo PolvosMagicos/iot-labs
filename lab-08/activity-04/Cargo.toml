@@ -1,0 +1,43 @@
+[package]
+name = "activity-04-ecc"
+version = "0.1.0"
+authors = ["Polvos Magicos <73202603+PolvosMagicos@users.noreply.github.com>"]
+edition = "2021"
+resolver = "2"
+rust-version = "1.82"
+
+[[bin]]
+name = "activity-04-ecc"
+harness = false
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true
+opt-level = "z"
+
+[patch.crates-io]
+esp-idf-sys = { git = "https://github.com/esp-rs/esp-idf-sys.git" }
+esp-idf-hal = { git = "https://github.com/esp-rs/esp-idf-hal.git" }
+esp-idf-svc = { git = "https://github.com/esp-rs/esp-idf-svc.git" }
+
+[dependencies]
+anyhow = "1"
+aes = "0.8"
+base64 = "0.22"
+bme280 = "0.5.1"
+ctr = "0.9"
+embedded-svc = "0.29"
+esp-idf-hal = "0.46.2"
+esp-idf-svc = { version = "0.52.1", features = ["critical-section", "embassy-time-driver", "embassy-sync"] }
+hex = "0.4"
+log = "0.4"
+p256 = { version = "0.13", features = ["ecdh"] }
+rand_core = "0.6"
+serde_json = "1"
+sha2 = "0.10"
+
+[build-dependencies]
+dotenvy = "0.15.7"
+embuild = "0.33.1"

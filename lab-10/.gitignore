@@ -1,0 +1,7 @@
+target/
+**/target/
+**/.env
+credentials.json
+*.pem
+result
+.direnv/

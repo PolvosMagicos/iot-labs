@@ -1,33 +1,21 @@
-# Secrets / local environment
+# Projects not part of this repo
+/blink/
+/blink-c++/
+/blink-esp-idf/
+*.zip
+
+# Build outputs / ESP-IDF tooling
+target/
+.embuild/
+sdkconfig
+sdkconfig.old
+
+# Secrets
 .env
 .env.*
 !.env.example
-
-# Rust build outputs
-target/
-**/target/
-
-# ESP-IDF / generated config
-sdkconfig
-sdkconfig.old
-build/
-
-# Nix
-result
-result-*
-.direnv/
-
-# Logs
-*.log
-logs/
-**/logs/
-
-# Mosquitto runtime data
-mosquitto/data/
-mosquitto/log/
-mosquitto/logs/
-
-# Editor / OS noise
-.vscode/
-.idea/
-.DS_Store
+keys/
+keys.txt
+*.pem
+credentials.json
+lab-10/backend/iot-lab-*.json
